@@ -1,16 +1,11 @@
-/* ... [Keep all your root, nav, hero, and services styles as they are] ... */
 
-/* --- ABOUT SECTION FIX --- */
 .profile-img img {
     border-radius: 20px;
     width: 300px;
     height: 400px;
     object-fit: cover;
-    /* Added blur radius (15px) to make the shadow look more natural */
     box-shadow: 20px 20px 15px var(--forest-green);
 }
-
-/* --- CONNECT SECTION (Moved outside of the mobile media query) --- */
 .connect {
     padding: 100px 0;
     background-color: var(--soft-cream);
@@ -56,14 +51,11 @@
     opacity: 0.8;
 }
 
-/* --- FOOTER (Keep as is) --- */
 footer {
     background-color: var(--forest-green);
     color: var(--white);
     padding: 60px 0;
 }
-
-/* --- MEDIA QUERIES (At the very bottom) --- */
 @media (max-width: 900px) {
     .connect-grid {
         grid-template-columns: 1fr;
@@ -71,7 +63,6 @@ footer {
 
     .calendar-wrapper {
         height: 600px;
-        /* Increased slightly for better visibility */
     }
 }
 

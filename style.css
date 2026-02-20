@@ -1,0 +1,258 @@
+:root {
+    --forest-green: #1b3a2e;
+    /* Deep Forest Green */
+    --soft-cream: #f9f7f2;
+    /* Main Background */
+    --dark-cream: #f0ede4;
+    /* Section Background */
+    --honey-gold: #d4a343;
+    /* High-Contrast Buttons */
+    --charcoal: #333333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--charcoal);
+    background-color: var(--soft-cream);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: 'Playfair Display', serif;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--forest-green);
+    margin-bottom: 50px;
+}
+
+/* Navigation */
+nav {
+    background: var(--white);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--dark-cream);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--forest-green);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--honey-gold);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(27, 58, 46, 0.6), rgba(27, 58, 46, 0.6)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-weight: 300;
+}
+
+/* Buttons */
+.btn-large,
+.btn-small {
+    background-color: var(--honey-gold);
+    color: var(--white);
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+}
+
+.btn-large:hover,
+.btn-small:hover {
+    background-color: #b38836;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Services Section */
+.services {
+    padding: 100px 0;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid var(--dark-cream);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--forest-green);
+}
+
+/* About Section */
+.about {
+    background-color: var(--dark-cream);
+    padding: 100px 0;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.profile-img img {
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 20px 20px 0px var(--forest-green);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--forest-green);
+}
+
+blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    padding-left: 20px;
+    border-left: 4px solid var(--honey-gold);
+    color: var(--forest-green);
+}
+
+/* Footer */
+footer {
+    background-color: var(--forest-green);
+    color: var(--white);
+    padding: 60px 0;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-legal {
+    text-align: right;
+}
+
+.footer-legal small {
+    display: block;
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-legal {
+        text-align: center;
+        width: 100%;
+    }
+
+    .profile-img {
+        margin: 0 auto;
+    }
+}
